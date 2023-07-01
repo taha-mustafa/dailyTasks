@@ -1,0 +1,186 @@
+/* Start Styling The Essentials */
+* {
+  padding: 0;
+  margin: 0;
+  --webkit-box-sizing: border-box;
+  --moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background-color: #f0f8ff;
+}
+/* End Styling The Essentials */
+
+/* Start Styling The App */
+.container {
+  margin: 100px auto 30px;
+  width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+@media (max-width: 449px) {
+  .container {
+    margin: 80px auto 30px;
+    width: 310px;
+  }
+}
+@media (min-width: 450px) and (max-width: 549px) {
+  .container {
+    width: 400px;
+  }
+}
+@media (min-width: 550px) and (max-width: 700px) {
+  .container {
+    width: 490px;
+  }
+}
+.container .toDo-area {
+  padding: 2rem 1rem 3rem;
+}
+.toDo-area .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+@media (max-width: 449px) {
+  .toDo-area .logo {
+    flex-direction: column;
+  }
+}
+.toDo-area .logo::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #52a8f5;
+  bottom: -16px;
+}
+.toDo-area .logo h1 {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: #1e92f8;
+}
+@media (max-width: 449px) {
+  .toDo-area .logo h1 {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+}
+.toDo-area .logo img {
+  width: 55px;
+  height: 50px;
+}
+@media (max-width: 449px) {
+  .toDo-area .logo img {
+    width: 50px;
+    height: 45px;
+  }
+}
+
+.toDo-area .input {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 449px) {
+  .toDo-area .input {
+    flex-direction: column;
+  }
+}
+.toDo-area .input::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #52a8f5;
+  bottom: -16px;
+}
+.input input {
+  padding: 10px;
+  text-align: center;
+  border-color: #6aafeb;
+  font-size: 1.3rem;
+  outline: none;
+  color: #1e92f8;
+  border-radius: 40px;
+}
+@media (max-width: 449px) {
+  .toDo-area .input input {
+    padding: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+}
+.input button {
+  padding: 10px 30px;
+  border: none;
+  background-color: #7ab3e6;
+  border-radius: 40px;
+  color: #f0f8ff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+@media (max-width: 449px) {
+  .toDo-area .input button {
+    padding: 5px 20px;
+    font-size: 1.1rem;
+  }
+}
+.input button:hover {
+  background-color: #52a8f5;
+}
+
+.toDo-list {
+  margin-top: 1rem;
+}
+.toDo-list ul li {
+  position: relative;
+  list-style: none;
+  font-size: 1.3rem;
+  padding: 12px 8px 12px 50px;
+  color: #1e92f8;
+  user-select: none;
+  cursor: pointer;
+}
+ul li button {
+  position: absolute;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  color: #1e92f8;
+  font-size: 40px;
+  line-height: 40px;
+}
+ul li button:hover {
+  background-color: #7ab3e6;
+}
+.toDo-list ul li::before {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  left: 8px;
+  top: 12px;
+}
+.toDo-list ul li.checked {
+  color: #7ab3e6;
+  text-decoration: line-through;
+}
+.toDo-list ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+/* End Styling The App */
